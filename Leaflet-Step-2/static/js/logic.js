@@ -64,7 +64,7 @@ var myMap = L.map("mapid", {
 
 // Create a layer control
 // Pass in the baseMaps and overlayMaps
-// Add the layer control to the map
+// Add the layer control to the map. Two general categories: baseMaps and overlayMaps. 
 L.control.layers(baseMaps, overlayMaps, {
   collapsed: false
 }).addTo(myMap);
@@ -93,11 +93,9 @@ d3.json(earthquakesURL, function(earthquakeData) {
     }
   }
 
-
-
   // Create a GeoJSON layer containing the features array, Day 2 Act 4, tiger is each circleMarker
-  // Each feature a popup describing the place and time of the earthquake in the popup
-  // Corresponds to var earthquakes = L.layerGroup(); 
+  // Each feature has a popup describing the place and time of the earthquake in the popup
+  // Corresponds to var earthquakes = L.layerGroup() under overlayMaps; this earthquakeData is under d3.json(earthquakesURL, function(earthquakeData) above. 
   L.geoJSON(earthquakeData, {
     pointToLayer: function (feature, tiger) {
       return L.circleMarker(tiger, 
@@ -121,9 +119,11 @@ d3.json(earthquakesURL, function(earthquakeData) {
   earthquakes.addTo(myMap);
 
 
+  
+
 
   // Get the tectonic plate data from tectonicplatesURL
-  // Corresponds to var tectonicplates = L.layerGroup();
+  // Corresponds to var tectonicplates = L.layerGroup() under overlayMaps;
   d3.json(tectonicplatesURL, function(data) {
     L.geoJSON(data, {
       color: "orange",
@@ -131,6 +131,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
     }).addTo(tectonicplates);
     tectonicplates.addTo(myMap);
   });
+
 
 
   
