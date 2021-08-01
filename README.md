@@ -2,6 +2,10 @@
 
 Product: https://gongl1.github.io/leaflet-challenge/index.html
 
+- - -
+
+© Liang Gong. Confidential and Proprietary. All Rights Reserved.
+
 ## Background
 
 ![1-Logo](Images/1-Logo.png)
@@ -90,4 +94,4 @@ Your final product will be assessed on the following metrics:
 
 - - -
 
-� 2021 Liang Gong. All Rights Reserved.
+© 2021 Liang Gong. All Rights Reserved.
